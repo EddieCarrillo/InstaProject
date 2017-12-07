@@ -75,7 +75,7 @@
         <!--Capture-->
         <scene sceneID="mgr-4c-ezF">
             <objects>
-                <viewController id="CPX-nh-eDq" sceneMemberID="viewController">
+                <viewController id="CPX-nh-eDq" customClass="CaptureViewController" customModule="InstaProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YzT-IQ-Fab"/>
                         <viewControllerLayoutGuide type="bottom" id="geC-tb-160"/>
@@ -83,13 +83,45 @@
                     <view key="view" contentMode="scaleToFill" id="f9D-kJ-cmb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EgH-sO-dlg">
+                                <rect key="frame" x="16" y="20" width="343" height="220"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your caption text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tup-mD-vms">
+                                <rect key="frame" x="16" y="256" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOi-W3-UOd">
+                                <rect key="frame" x="163" y="431" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitTapped:" destination="CPX-nh-eDq" eventType="touchUpInside" id="YbW-TL-bMO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EgH-sO-dlg" firstAttribute="leading" secondItem="f9D-kJ-cmb" secondAttribute="leadingMargin" id="3F3-Q4-81B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tup-mD-vms" secondAttribute="trailing" id="IU8-6O-vzt"/>
+                            <constraint firstItem="EgH-sO-dlg" firstAttribute="top" secondItem="YzT-IQ-Fab" secondAttribute="bottom" id="KyU-mS-Vbb"/>
+                            <constraint firstItem="geC-tb-160" firstAttribute="top" secondItem="Tup-mD-vms" secondAttribute="bottom" constant="332" id="Yag-yX-K8y"/>
+                            <constraint firstItem="Tup-mD-vms" firstAttribute="top" secondItem="EgH-sO-dlg" secondAttribute="bottom" constant="16" id="fa1-dM-dPA"/>
+                            <constraint firstItem="EgH-sO-dlg" firstAttribute="trailing" secondItem="f9D-kJ-cmb" secondAttribute="trailingMargin" id="iff-Gb-v83"/>
+                            <constraint firstItem="Tup-mD-vms" firstAttribute="leading" secondItem="f9D-kJ-cmb" secondAttribute="leadingMargin" id="lPk-Sa-uZ5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Capture" image="insta_camera_btn" id="2eD-K5-mLB"/>
+                    <connections>
+                        <outlet property="captionTextField" destination="Tup-mD-vms" id="XAx-qO-euk"/>
+                        <outlet property="captureImageView" destination="EgH-sO-dlg" id="iXa-qP-dV5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1E-VE-UIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982" y="466"/>
+            <point key="canvasLocation" x="2798" y="-189"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pfK-8U-vhE">
@@ -102,13 +134,20 @@
                     <view key="view" contentMode="scaleToFill" id="ako-oJ-JE3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfl-RM-Bu4">
+                                <rect key="frame" x="161" y="268" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log out"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" id="wie-uI-9fU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71D-VO-lSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="1248"/>
+            <point key="canvasLocation" x="3684" y="-189"/>
         </scene>
         <!--Home-->
         <scene sceneID="CWZ-35-jMI">

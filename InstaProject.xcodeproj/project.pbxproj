@@ -18,6 +18,7 @@
 		1F6896F31FD8B4BF00253CBD /* CellFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896F21FD8B4BF00253CBD /* CellFeedTableViewCell.swift */; };
 		1F6896F71FD8B99F00253CBD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896F61FD8B99F00253CBD /* Post.swift */; };
 		1F6896F91FD8BA6900253CBD /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896F81FD8BA6900253CBD /* NetworkAPI.swift */; };
+		1F6896FD1FD8C89900253CBD /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896FC1FD8C89900253CBD /* CaptureViewController.swift */; };
 		DFDE876F8B2738D3EAE03B67 /* Pods_InstaProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF286826E0D380FCCB8DBB4D /* Pods_InstaProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		1F6896F21FD8B4BF00253CBD /* CellFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellFeedTableViewCell.swift; sourceTree = "<group>"; };
 		1F6896F61FD8B99F00253CBD /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		1F6896F81FD8BA6900253CBD /* NetworkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		1F6896FC1FD8C89900253CBD /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		35FB8B60F65146AA112B1D69 /* Pods-InstaProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaProjectTests/Pods-InstaProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF6E853BF070DF9BF8EEEF79 /* Pods-InstaProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaProjectTests/Pods-InstaProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4FEE67D5747DF6BCC000B1C /* Pods-InstaProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaProject/Pods-InstaProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		1F6896CB1FD790DF00253CBD /* InstaProject */ = {
 			isa = PBXGroup;
 			children = (
+				1F6896FB1FD8C87000253CBD /* Capture */,
 				1F6896FA1FD8BDBD00253CBD /* Network */,
 				1F6896F41FD8B98600253CBD /* Posts */,
 				1F6896EF1FD8B3F900253CBD /* HomeFeed */,
@@ -158,6 +161,14 @@
 				1F6896F81FD8BA6900253CBD /* NetworkAPI.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		1F6896FB1FD8C87000253CBD /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				1F6896FC1FD8C89900253CBD /* CaptureViewController.swift */,
+			);
+			name = Capture;
 			sourceTree = "<group>";
 		};
 		829819492430A23788BCFF4C /* Pods */ = {
@@ -384,6 +395,7 @@
 			files = (
 				1F6896CF1FD790DF00253CBD /* LoginViewController.swift in Sources */,
 				1F6896F31FD8B4BF00253CBD /* CellFeedTableViewCell.swift in Sources */,
+				1F6896FD1FD8C89900253CBD /* CaptureViewController.swift in Sources */,
 				1F6896F11FD8B40B00253CBD /* FeedViewController.swift in Sources */,
 				1F6896CD1FD790DF00253CBD /* AppDelegate.swift in Sources */,
 				1F6896F71FD8B99F00253CBD /* Post.swift in Sources */,
