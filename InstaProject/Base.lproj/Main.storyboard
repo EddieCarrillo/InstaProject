@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -71,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--Item 2-->
+        <!--Capture-->
         <scene sceneID="mgr-4c-ezF">
             <objects>
                 <viewController id="CPX-nh-eDq" sceneMemberID="viewController">
@@ -84,11 +85,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="2eD-K5-mLB"/>
+                    <tabBarItem key="tabBarItem" title="Capture" image="insta_camera_btn" id="2eD-K5-mLB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1E-VE-UIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1982" y="466"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="pfK-8U-vhE">
+            <objects>
+                <viewController id="Ia6-Gb-2re" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xvB-r2-dAl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zy9-Td-qCb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ako-oJ-JE3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" id="wie-uI-9fU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71D-VO-lSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="1248"/>
         </scene>
         <!--Home-->
         <scene sceneID="CWZ-35-jMI">
@@ -101,13 +121,60 @@
                     <view key="view" contentMode="scaleToFill" id="dzq-Mh-OdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-st-4cX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="561"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="132" id="FmX-EN-Cj4" customClass="CellFeedTableViewCell" customModule="InstaProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FmX-EN-Cj4" id="e5N-PZ-sF9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MeT-UD-heb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="102.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is the caption for the post " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw8-0V-aIP">
+                                                    <rect key="frame" x="8" y="102.5" width="367" height="21"/>
+                                                    <color key="backgroundColor" red="0.33149102393617025" green="0.33149102393617025" blue="0.33149102393617025" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MeT-UD-heb" firstAttribute="leading" secondItem="e5N-PZ-sF9" secondAttribute="leading" id="976-mX-iM8"/>
+                                                <constraint firstItem="cw8-0V-aIP" firstAttribute="top" secondItem="MeT-UD-heb" secondAttribute="bottom" id="LyB-AV-zX5"/>
+                                                <constraint firstItem="cw8-0V-aIP" firstAttribute="leading" secondItem="e5N-PZ-sF9" secondAttribute="leadingMargin" id="NmY-xK-nv8"/>
+                                                <constraint firstAttribute="trailing" secondItem="MeT-UD-heb" secondAttribute="trailing" id="nDo-Wv-Pn9"/>
+                                                <constraint firstItem="cw8-0V-aIP" firstAttribute="bottom" secondItem="e5N-PZ-sF9" secondAttribute="bottomMargin" id="th0-av-Yuf"/>
+                                                <constraint firstAttribute="trailing" secondItem="cw8-0V-aIP" secondAttribute="trailing" id="ufJ-xa-uWe"/>
+                                                <constraint firstItem="MeT-UD-heb" firstAttribute="top" secondItem="e5N-PZ-sF9" secondAttribute="top" id="yQU-ey-mfP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="cw8-0V-aIP" id="fVE-Rv-AOm"/>
+                                            <outlet property="posterImageView" destination="MeT-UD-heb" id="yh6-cz-Pay"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NaI-st-4cX" firstAttribute="top" secondItem="n7F-Cc-D44" secondAttribute="bottom" id="VfV-oK-3gr"/>
+                            <constraint firstItem="tCI-ba-61q" firstAttribute="top" secondItem="NaI-st-4cX" secondAttribute="bottom" constant="37" id="Vwv-W0-ttH"/>
+                            <constraint firstItem="NaI-st-4cX" firstAttribute="leading" secondItem="dzq-Mh-OdC" secondAttribute="leading" id="qXp-dy-mM2"/>
+                            <constraint firstAttribute="trailing" secondItem="NaI-st-4cX" secondAttribute="trailing" id="uen-Wq-Ng4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="feed_tab" id="pxS-VE-OzX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYw-6X-y5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982" y="-189"/>
+            <point key="canvasLocation" x="1981.5999999999999" y="-189.3553223388306"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ieb-aE-bHT">
@@ -121,6 +188,7 @@
                     <connections>
                         <segue destination="sjb-sj-JtV" kind="relationship" relationship="viewControllers" id="bzh-zZ-OzV"/>
                         <segue destination="CPX-nh-eDq" kind="relationship" relationship="viewControllers" id="14e-RY-n1X"/>
+                        <segue destination="Ia6-Gb-2re" kind="relationship" relationship="viewControllers" id="jr3-qL-KZr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fy-RE-G2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,5 +198,7 @@
     </scenes>
     <resources>
         <image name="feed_tab" width="25" height="25"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="profile_tab" width="25" height="25"/>
     </resources>
 </document>
