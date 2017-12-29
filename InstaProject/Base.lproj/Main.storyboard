@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="68" y="-269"/>
         </scene>
         <!--Capture-->
         <scene sceneID="mgr-4c-ezF">
@@ -86,6 +86,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EgH-sO-dlg">
                                 <rect key="frame" x="16" y="20" width="343" height="220"/>
+                                <color key="backgroundColor" red="1" green="0.47318911625894633" blue="0.18165991275920412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your caption text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tup-mD-vms">
                                 <rect key="frame" x="16" y="256" width="343" height="30"/>
@@ -121,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1E-VE-UIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2798" y="-189"/>
+            <point key="canvasLocation" x="2226" y="-269"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pfK-8U-vhE">
@@ -147,12 +148,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71D-VO-lSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3684" y="-189"/>
+            <point key="canvasLocation" x="3062" y="-269"/>
         </scene>
         <!--Home-->
         <scene sceneID="CWZ-35-jMI">
             <objects>
-                <viewController id="sjb-sj-JtV" sceneMemberID="viewController">
+                <viewController id="sjb-sj-JtV" customClass="FeedViewController" customModule="InstaProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n7F-Cc-D44"/>
                         <viewControllerLayoutGuide type="bottom" id="tCI-ba-61q"/>
@@ -161,36 +162,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-st-4cX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="157" sectionHeaderHeight="28" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-st-4cX">
                                 <rect key="frame" x="0.0" y="20" width="375" height="561"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="132" id="FmX-EN-Cj4" customClass="CellFeedTableViewCell" customModule="InstaProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="132"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="157" id="FmX-EN-Cj4" customClass="CellFeedTableViewCell" customModule="InstaProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FmX-EN-Cj4" id="e5N-PZ-sF9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="156.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MeT-UD-heb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="102.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="136.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is the caption for the post " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw8-0V-aIP">
-                                                    <rect key="frame" x="8" y="102.5" width="367" height="21"/>
+                                                    <rect key="frame" x="0.0" y="136" width="375" height="20.5"/>
                                                     <color key="backgroundColor" red="0.33149102393617025" green="0.33149102393617025" blue="0.33149102393617025" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="MeT-UD-heb" firstAttribute="leading" secondItem="e5N-PZ-sF9" secondAttribute="leading" id="976-mX-iM8"/>
                                                 <constraint firstItem="cw8-0V-aIP" firstAttribute="top" secondItem="MeT-UD-heb" secondAttribute="bottom" id="LyB-AV-zX5"/>
-                                                <constraint firstItem="cw8-0V-aIP" firstAttribute="leading" secondItem="e5N-PZ-sF9" secondAttribute="leadingMargin" id="NmY-xK-nv8"/>
+                                                <constraint firstItem="cw8-0V-aIP" firstAttribute="leading" secondItem="e5N-PZ-sF9" secondAttribute="leading" id="UDi-jc-cwO"/>
                                                 <constraint firstAttribute="trailing" secondItem="MeT-UD-heb" secondAttribute="trailing" id="nDo-Wv-Pn9"/>
-                                                <constraint firstItem="cw8-0V-aIP" firstAttribute="bottom" secondItem="e5N-PZ-sF9" secondAttribute="bottomMargin" id="th0-av-Yuf"/>
                                                 <constraint firstAttribute="trailing" secondItem="cw8-0V-aIP" secondAttribute="trailing" id="ufJ-xa-uWe"/>
                                                 <constraint firstItem="MeT-UD-heb" firstAttribute="top" secondItem="e5N-PZ-sF9" secondAttribute="top" id="yQU-ey-mfP"/>
+                                                <constraint firstAttribute="bottom" secondItem="cw8-0V-aIP" secondAttribute="bottom" id="zJv-Yb-cDn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -210,10 +211,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="feed_tab" id="pxS-VE-OzX"/>
+                    <connections>
+                        <outlet property="tableview" destination="NaI-st-4cX" id="9by-uK-c7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYw-6X-y5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1981.5999999999999" y="-189.3553223388306"/>
+            <point key="canvasLocation" x="1469.5999999999999" y="-269.41529235382313"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ieb-aE-bHT">
@@ -232,7 +236,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fy-RE-G2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="139"/>
+            <point key="canvasLocation" x="756" y="-269"/>
         </scene>
     </scenes>
     <resources>

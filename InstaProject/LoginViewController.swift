@@ -18,13 +18,13 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func onLoginTapped(_ sender: UIButton) {
+        print("onLoginTapped()")
+        
         
         guard let username = usernameTextField.text, let password = passwordTextField.text else {
             print("One of the fields was empty.")
-            
             return
         }
-        
         
         PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
             if user != nil {
@@ -39,6 +39,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func onSignUpTapped(_ sender: UIButton) {
+        
+        print("onSignUpTapped()")
         let newUser = PFUser()
         
         newUser.username = usernameTextField.text

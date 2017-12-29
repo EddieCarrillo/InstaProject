@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class CaptureViewController: UIViewController {
+class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     
@@ -18,6 +18,9 @@ class CaptureViewController: UIViewController {
     
     
     @IBOutlet weak var captionTextField: UITextField!
+    
+    
+  //  var finishedSubmitting: (()->()) = {}
     
     
     
@@ -45,20 +48,58 @@ class CaptureViewController: UIViewController {
         
       //Post the data to the server
         
+        Post.postUserImage(image: image, withCaption: self.captionTextField.text!) { (success: Bool, error: Error?) in
+            if let error = error {
+                print("[ERROR] \(error)")
+            }else if success {
+                print("Image uploaded successfully")
+            }
+        }
         
-    
+        //Reset to the first view controller
+        self.tabBarController?.selectedIndex = 0
         
         
     }
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageChooserTapped))
+        
+        self.captureImageView.isUserInteractionEnabled = true
+        
+        
+        self.captureImageView.gestureRecognizers = []
+        self.captureImageView.gestureRecognizers?.append(tapGesture)
+        //self.captureImageView.addGestureRecognizer(tapGesture)
+        
+        print(self.captureImageView.frame.size.height)
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    func imageChooserTapped(){
+        print("imagechoosertapped")
+        let imagePickerViewController = UIImagePickerController()
+        imagePickerViewController.delegate = self
+        imagePickerViewController.allowsEditing = true
+        //Choose from library
+        imagePickerViewController.sourceType  = UIImagePickerControllerSourceType.photoLibrary
+        
+        
+        self.present(imagePickerViewController, animated: true) {
+            print("Image picker view controller is being displayed!")
+        }
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        self.captureImageView.image = originalImage
+        dismiss(animated: true, completion: nil)
     }
     
     

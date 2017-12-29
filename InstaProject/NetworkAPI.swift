@@ -98,5 +98,22 @@ class NetworkAPI: NSObject{
         }
     
     }
+    
+    
+    class func getPFFileFromImage(image: UIImage?) -> PFFile?{
+        guard let image = image else {
+            print("No image passed in.")
+            return nil
+        }
+        
+        guard let imageData = UIImagePNGRepresentation(image) else {
+            print("Could not extract the image data using PNG format.")
+            return nil
+        }
+        
+        return PFFile(name: "image.png", data: imageData)
+        
+        
+    }
 
 }

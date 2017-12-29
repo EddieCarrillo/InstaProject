@@ -25,7 +25,7 @@ class CellFeedTableViewCell: UITableViewCell {
             }
             
             //Probably in the proccess of loading the iamge
-            posterImageView.image = post?.image
+            posterImageView.image = post.image
             
             captionLabel.text = post.caption
         }
