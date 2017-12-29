@@ -20,6 +20,7 @@
 		1F6896F91FD8BA6900253CBD /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896F81FD8BA6900253CBD /* NetworkAPI.swift */; };
 		1F6896FD1FD8C89900253CBD /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6896FC1FD8C89900253CBD /* CaptureViewController.swift */; };
 		DFDE876F8B2738D3EAE03B67 /* Pods_InstaProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF286826E0D380FCCB8DBB4D /* Pods_InstaProject.framework */; };
+		F70AE2691FF6112900EFC8C6 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AE2681FF6112900EFC8C6 /* FeedDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		D849E78D01CF1DD951CC0B7D /* Pods_InstaProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF286826E0D380FCCB8DBB4D /* Pods_InstaProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDA734A96F311B6EE9D87EB /* Pods-InstaProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaProject/Pods-InstaProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F70AE2681FF6112900EFC8C6 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				1F6896F01FD8B40B00253CBD /* FeedViewController.swift */,
 				1F6896F21FD8B4BF00253CBD /* CellFeedTableViewCell.swift */,
+				F70AE2681FF6112900EFC8C6 /* FeedDetailViewController.swift */,
 			);
 			name = HomeFeed;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				1F6896CD1FD790DF00253CBD /* AppDelegate.swift in Sources */,
 				1F6896F71FD8B99F00253CBD /* Post.swift in Sources */,
 				1F6896F91FD8BA6900253CBD /* NetworkAPI.swift in Sources */,
+				F70AE2691FF6112900EFC8C6 /* FeedDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
